@@ -21,6 +21,7 @@
 #define _SPECIAL 5
 #define _NAV 6
 #define _FN 7
+#define _LCHANGE
 
 #define DEFAULT MO(_DEFAULT)
 #define QWERTZ TG(_QWERTZ)
@@ -30,6 +31,7 @@
 #define FN MO(_FN)
 #define PRACT TG(_PRACT)
 #define PRACTSP MO(_PRACTSP)
+#define LCHANGE MO(_LCHANGE)
 
 const key_override_t bigss_key_override = ko_make_with_layers_negmods_and_options(MOD_MASK_SHIFT, DE_SS, S(RALT(DE_SS)), ~0, KC_NO, ko_option_no_reregister_trigger);
 // This globally defines all key overrides to be used
@@ -40,17 +42,6 @@ const key_override_t **key_overrides = (const key_override_t *[]){
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	
-    /*[_DEFAULT] = LAYOUT_5x6(
-        KC_ESC , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                         KC_6  , KC_7  , KC_8  , KC_9  , KC_0  ,DE_MINS,
-        KC_TAB , DE_X  , DE_V  , DE_L  , DE_C  , DE_W  ,                         DE_K  , DE_H  , DE_G  , DE_F  , DE_Q  , DE_SS ,
-        KC_LSFT, DE_U  , DE_I  , DE_A  , DE_E  , DE_O  ,                         DE_S  , DE_N  , DE_R  , DE_T  , DE_D  , DE_Y  ,
-        KC_LCTL, DE_UE , DE_OE , DE_AE , DE_P  , DE_Z  ,                         DE_B  , DE_M  ,DE_COMM,DE_DOT , DE_J  ,KC_RSFT,
-                        _______,_______,                                                        _______,_______,
-                                KC_LSFT,KC_SPC ,                                        KC_BSPC,KC_ENT ,
-                                        SPECIAL,KC_LCTL,                        KC_LALT,  NAV  ,
-                                        KC_LGUI,GAMING ,                        QWERTZ ,KC_RALT
-    ),*/
-	
     [_DEFAULT] = LAYOUT_5x6(
         KC_ESC , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                         KC_6  , KC_7  , KC_8  , KC_9  , KC_0  ,XXXXXXX,
         KC_TAB , DE_Q  , DE_W  , DE_F  , DE_P  , DE_B  ,                         DE_J  , DE_L  , DE_U  , DE_Y  ,DE_SCLN,XXXXXXX,
@@ -58,8 +49,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, DE_Z  , DE_X  , DE_C  , DE_D  , DE_V  ,                         DE_K  , DE_H  ,DE_COMM,DE_DOT ,DE_SLSH,XXXXXXX,
                         XXXXXXX,XXXXXXX,                                                        XXXXXXX,XXXXXXX,
                                 KC_LCTL,KC_SPC ,                                        KC_LSFT,SPECIAL,
-                                        XXXXXXX,  NAV  ,                          FN   , PRACT ,
-                                        GAMING ,KC_LGUI,                        KC_RALT,QWERTZ 
+                                        XXXXXXX,  NAV  ,                          FN   ,XXXXXXX,
+                                        XXXXXXX,KC_LGUI,                        KC_LALT,XXXXXXX
     ),
 	
     [_QWERTZ] = LAYOUT_5x6(
@@ -132,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_F12 , KC_F1 , KC_F2 , KC_F3 , KC_F4 , KC_F5 ,                         KC_F6 , KC_F7 , KC_F8 , KC_F9 ,KC_F10 ,KC_F11 ,
         XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,                        XXXXXXX,XXXXXXX, DE_UE ,XXXXXXX,XXXXXXX,KC_F13 ,
         KC_CAPS, DE_AE ,XXXXXXX, DE_SS ,XXXXXXX,XXXXXXX,                        XXXXXXX,KC_MPRV,KC_MPLY,KC_MNXT, DE_OE ,KC_F14 ,
-        XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,                        XXXXXXX,KC_VOLD,KC_MUTE,KC_VOLU,XXXXXXX,KC_F15 ,
+        XXXXXXX,XXXXXXX, PRACT ,GAMING ,QWERTZ ,XXXXXXX,                        XXXXXXX,KC_VOLD,KC_MUTE,KC_VOLU,XXXXXXX,KC_F15 ,
                         XXXXXXX,XXXXXXX,                                                        XXXXXXX,XXXXXXX,
                                 _______,_______,                                        _______,_______,
                                         _______,_______,                        _______,_______,
