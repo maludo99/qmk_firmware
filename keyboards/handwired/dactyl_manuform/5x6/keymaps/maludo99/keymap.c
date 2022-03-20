@@ -51,28 +51,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                         XXXXXXX,  NAV  ,                          FN   ,XXXXXXX,
                                         XXXXXXX,KC_LGUI,                        KC_LALT,XXXXXXX
     ),
-
-    [SPECIAL] = LAYOUT_5x6(
-        DE_CIRC,DE_DEG ,DE_SUP2,DE_SUP3,DE_DLR ,DE_EURO,                        XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
-        XXXXXXX, DE_AT ,DE_UNDS,DE_LBRC,DE_RBRC,DE_SECT,                        DE_EXLM,DE_LABK,DE_RABK,DE_EQL ,DE_COLN,XXXXXXX,
-        XXXXXXX,DE_BSLS,DE_SLSH,DE_LCBR,DE_RCBR,DE_ASTR,                        DE_QUES,DE_LPRN,DE_RPRN,DE_MINS,DE_AMPR,XXXXXXX,
-        XXXXXXX,DE_HASH,DE_DLR ,DE_PIPE,DE_ACUT,DE_GRV ,                        DE_PLUS,DE_PERC,DE_DQUO,DE_QUOT,DE_TILD,XXXXXXX,
-                        XXXXXXX,XXXXXXX,                                                        XXXXXXX,XXXXXXX,
-                                _______,_______,                                        _______,_______,
-                                        _______,_______,                        _______,_______,
-                                        _______,_______,                        _______,_______
-    ),
-	
-    [FN] = LAYOUT_5x6(
-        KC_F12 , KC_F1 , KC_F2 , KC_F3 , KC_F4 , KC_F5 ,                         KC_F6 , KC_F7 , KC_F8 , KC_F9 ,KC_F10 ,KC_F11 ,
-        XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,                        XXXXXXX,XXXXXXX, DE_UE ,XXXXXXX,XXXXXXX,KC_F13 ,
-        KC_CAPS, DE_AE ,XXXXXXX, DE_SS ,XXXXXXX,XXXXXXX,                        XXXXXXX,KC_MPRV,KC_MPLY,KC_MNXT, DE_OE ,KC_F14 ,
-        XXXXXXX,XXXXXXX, PRACT ,GAMING ,QWERTZ ,XXXXXXX,                        XXXXXXX,KC_VOLD,KC_MUTE,KC_VOLU,XXXXXXX,KC_F15 ,
-                        XXXXXXX,XXXXXXX,                                                        XXXXXXX,XXXXXXX,
-                                _______,_______,                                        _______,_______,
-                                        _______,_______,                        _______,_______,
-                                        _______,_______,                        _______,_______
-    ),
 	
     [QWERTZ] = LAYOUT_5x6(
         KC_ESC , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                         KC_6  , KC_7  , KC_8  , KC_9  , KC_0  ,XXXXXXX,
@@ -107,11 +85,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                         _______,_______,                        _______,_______
     ),
 
-    [PRACTSP] = LAYOUT_5x6(
-        KC_CIRC,XXXXXXX,XXXXXXX,XXXXXXX,KC_DLR ,XXXXXXX,                        XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
-        XXXXXXX, KC_AT ,KC_UNDS,KC_LBRC,KC_RBRC,XXXXXXX,                        KC_EXLM,KC_LABK,KC_RABK,KC_EQL ,S(KC_P),XXXXXXX,
-        XXXXXXX,KC_BSLS,KC_SLSH,KC_LCBR,KC_RCBR,KC_ASTR,                        KC_QUES,KC_LPRN,KC_RPRN,KC_MINS,KC_AMPR,XXXXXXX,
-        XXXXXXX,KC_HASH,KC_DLR ,KC_PIPE,XXXXXXX,KC_GRV ,                        KC_PLUS,KC_PERC,KC_DQUO,KC_QUOT,KC_TILD,XXXXXXX,
+    [SPECIAL] = LAYOUT_5x6(
+        DE_CIRC,DE_DEG ,DE_SUP2,DE_SUP3,DE_DLR ,DE_EURO,                        XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
+        XXXXXXX, DE_AT ,DE_UNDS,DE_LBRC,DE_RBRC,DE_SECT,                        DE_EXLM,DE_LABK,DE_RABK,DE_EQL ,DE_COLN,XXXXXXX,
+        XXXXXXX,DE_BSLS,DE_SLSH,DE_LCBR,DE_RCBR,DE_ASTR,                        DE_QUES,DE_LPRN,DE_RPRN,DE_MINS,DE_AMPR,XXXXXXX,
+        XXXXXXX,DE_HASH,DE_DLR ,DE_PIPE,DE_ACUT,DE_GRV ,                        DE_PLUS,DE_PERC,DE_DQUO,DE_QUOT,DE_TILD,XXXXXXX,
                         XXXXXXX,XXXXXXX,                                                        XXXXXXX,XXXXXXX,
                                 _______,_______,                                        _______,_______,
                                         _______,_______,                        _______,_______,
@@ -124,6 +102,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX,KC_HOME,KC_LEFT,KC_DOWN,KC_RGHT,KC_END ,                        KC_CALC, KC_P4 , KC_P5 , KC_P6 ,KC_PPLS,XXXXXXX,
         XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,KC_UNDO,XXXXXXX,                        XXXXXXX, KC_P1 , KC_P2 , KC_P3 ,KC_PENT,XXXXXXX,
                         XXXXXXX,XXXXXXX,                                                         KC_P0 ,DE_PCMM,
+                                _______,_______,                                        _______,_______,
+                                        _______,_______,                        _______,_______,
+                                        _______,_______,                        _______,_______
+    ),
+	
+    [FN] = LAYOUT_5x6(
+        KC_F12 , KC_F1 , KC_F2 , KC_F3 , KC_F4 , KC_F5 ,                         KC_F6 , KC_F7 , KC_F8 , KC_F9 ,KC_F10 ,KC_F11 ,
+        XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,                        XXXXXXX,XXXXXXX, DE_UE ,XXXXXXX,XXXXXXX,KC_F13 ,
+        KC_CAPS, DE_AE ,XXXXXXX, DE_SS ,XXXXXXX,XXXXXXX,                        XXXXXXX,KC_MPRV,KC_MPLY,KC_MNXT, DE_OE ,KC_F14 ,
+        XXXXXXX,XXXXXXX, PRACT ,GAMING ,QWERTZ ,XXXXXXX,                        XXXXXXX,KC_VOLD,KC_MUTE,KC_VOLU,XXXXXXX,KC_F15 ,
+                        XXXXXXX,XXXXXXX,                                                        XXXXXXX,XXXXXXX,
+                                _______,_______,                                        _______,_______,
+                                        _______,_______,                        _______,_______,
+                                        _______,_______,                        _______,_______
+    ),
+
+    [PRACTSP] = LAYOUT_5x6(
+        KC_CIRC,XXXXXXX,XXXXXXX,XXXXXXX,KC_DLR ,XXXXXXX,                        XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
+        XXXXXXX, KC_AT ,KC_UNDS,KC_LBRC,KC_RBRC,XXXXXXX,                        KC_EXLM,KC_LABK,KC_RABK,KC_EQL ,S(KC_P),XXXXXXX,
+        XXXXXXX,KC_BSLS,KC_SLSH,KC_LCBR,KC_RCBR,KC_ASTR,                        KC_QUES,KC_LPRN,KC_RPRN,KC_MINS,KC_AMPR,XXXXXXX,
+        XXXXXXX,KC_HASH,KC_DLR ,KC_PIPE,XXXXXXX,KC_GRV ,                        KC_PLUS,KC_PERC,KC_DQUO,KC_QUOT,KC_TILD,XXXXXXX,
+                        XXXXXXX,XXXXXXX,                                                        XXXXXXX,XXXXXXX,
                                 _______,_______,                                        _______,_______,
                                         _______,_______,                        _______,_______,
                                         _______,_______,                        _______,_______
